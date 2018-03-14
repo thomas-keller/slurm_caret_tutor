@@ -11,8 +11,10 @@
 
 module add apps/R
 R
+
 #then
 #within R, if you have the default directory structure
+R
 source('slurm_caret_tutor/starter_rpackages.R')
 
 
