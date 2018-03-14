@@ -1,0 +1,35 @@
+#steps
+
+#1 initial R setup
+#from your home directory, upload R and .sh files
+## Everyone will need to redo this step. The R script is just a line of install.packages of 
+#  tidyverse, caret and some other packages
+# get a coffee or read something more interesting than the text scrolling by, the compiling of the various packages will take 15-20 minutes (more?)
+# it will ask to install a local library, press Y to confirm once then you can walk away (hopefully)
+#load R as follows
+
+
+module add apps/R
+R
+#then
+#within R, if you have the default directory structure
+source('slurm_caret_tutor/starter_rpackages.R')
+
+
+
+
+#analyses
+#See https://wiki.rc.usf.edu/index.php/SLURM_Users for basic job submission info
+
+#This is the most basic submission process for a single serial job. As configured, 
+#it will use 8 processors in parallel for computation and run for 2 hours, which should be more than sufficient
+#for this first model.
+
+#submission
+#to submit a single serial job, the syntax is sbatch <job.sh>
+
+sbatch example_caret_ml.sh
+sbatch ex_date.sh
+
+
+
